@@ -1,0 +1,37 @@
+DualsenseReceveir:
+  ros__parameters:
+    event_name: 'event21'
+    center: 128.0
+    blind_value: 6
+    button_codes:
+      'x': 304
+      'circle': 305
+      'triangle': 307
+      'square': 308
+      'L1': 310
+      'R1': 311
+      'L2': 312
+      'R2': 313
+      'create': 314
+      'options': 315
+      'playstation': 316
+      'L3': 317
+      'R3': 318
+    button_values:
+      'up': 0
+      'down': 1
+    absolutes:
+      'left_joystick_lr': 0
+      'left_joystick_ud': 1
+      'right_joystick_lr': 2
+      'right_joystick_ud': 3
+      'leftpad_lr': 16
+      'leftpad_ud': 17
+    leftpad_lr_values:
+      'left': -1
+      'stop': 0
+      'right': 1
+    leftpad_ud_values:
+      'up': -1
+      'stop': 0
+      'right' 1
