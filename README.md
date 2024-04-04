@@ -45,8 +45,8 @@ Now you can create a virtual enviroment and install python packages.
 | Connectors | | |
 | Screws | | | |
 | Threaded Insert Assortment Box | 1 | M2/M3/M4/M5 Threaded Insert for connecting printed models  | [Amazon](https://www.amazon.fr/gp/product/B08K1BVGN9/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1)|
-| PLA | | | |
-| FLEX | | | 
+| PLA | | Completely your choice. I used two Amazon basics PLA (black and yellow). | [Amazon](https://www.amazon.fr/AmazonBasics-Filament-pour-imprimante-Bobine/dp/B07T6WLFML/ref=sr_1_6?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2RYRHS3YQ1ZS3&dib=eyJ2IjoiMSJ9.oZIlo-jN6nxeUFWAKQBgP-2YpBFPPJwKa1AF9dR2pwBg3Z26tQMmFh6JdcYXKgUSoIF0Er9nypgnnRnwH0CNF2s13dWXLkFncjG0Xyl-Q6hz0F_2HD0_AbQR_Af654ZAtTt7PcGrz9AtylU2cTn3N10x0sJdxV5zA8ZHyZ642KIgNopyUmLsj1iTSCY0XRWoLqXbBHIAZT-gnYqAW1qMaamj8DakOznrsIwP9eGaAZx7PgAXRC7PeMnV83w5pypyY6aiGrq7zO1FLQr6Y2mDcc7ya17Mr9P3XQKBt7eEAeM.746Iudr0bIpw_NaHPsF02Tg2xfmW9TKLVT16hCTrSPU&dib_tag=se&keywords=pla&qid=1712231452&sprefix=pl%2Caps%2C85&sr=8-6)|
+| FLEX | | Completely your choice. I used a 3DJAke TPU (black). | [3DJake](https://www.3djake.com/3djake/tpu-a95-black)| 
 
 
 # 3D Printing
@@ -59,11 +59,11 @@ Because the servos DS3225 are bigger than the servos used in the original projec
 | V1.00_Chassis_PlateJetsonNano.stl | 1 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340) | A plate for mounting Nvidia Jetson Nano and PCA9865|
 | V1.00_Chassis_Right.stl | 1 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.00_Chassis_Left.stl | 1 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
-| L_arm_joint_cls.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3445283/files) | I prefer the soulder joint from the original KDY0523's project because of the shape for servo horns.|
+| L_arm_joint_cls.stl | 2 | [Thingiverse(KDY0523)](https://www.thingiverse.com/thing:3445283/files) | I prefer the shoulder parts from the original KDY0523's project because of the shape for servo horns.|
 | V1.01_Left_MidArm.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.01_Left_MidArm_Cover.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.01_Left_Wrist.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
-| R_arm_joint_cls.stl | 2 | [Thingiverse(KDY0523)](https://www.thingiverse.com/thing:3445283/files) | I prefer the soulder joint from the original KDY0523's project because of the shape for servo horns.|
+| R_arm_joint_cls.stl | 2 | [Thingiverse(KDY0523)](https://www.thingiverse.com/thing:3445283/files) | I prefer the shoulder parts from the original KDY0523's project because of the shape for servo horns.|
 | V1.01_Right_MidArm.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.01_Right_MidArm_Cover.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.01_Right_Wrist.stl | 2 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
@@ -71,7 +71,7 @@ Because the servos DS3225 are bigger than the servos used in the original projec
 | V1.01_Rear_Shoulder_Outer.stl | 1 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.01_Front_Shoulder_Inner.stl | 1 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
 | V1.01_Front_Shoulder_Outer.stl | 1 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
-| V1.00_Foot.stl | 4 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | |
+| V1.00_Foot.stl | 4 | [Thingiverse(bradprin)](https://www.thingiverse.com/thing:3761340)  | These parts are printed with FLEX plastic.|
 | Covers (Top and buttom) | 1 | [Onshape](https://cad.onshape.com/documents/e91ce751a4134fac6087dc9a/w/2c97cdb406c697e3841868dc/e/b5916b3c670933669aaaaf1c) | Created in Onshape. The length was increased. |
 | Front cover | 1 | [Onshape](https://cad.onshape.com/documents/9e01bee40010577be9916db1/w/a3e147bdc0528d756297ecc2/e/368df935aa7e4a02748ae26f) | A front cover for IMX219-83 stereo Camera. I don't like the design of this part. It will be changed in the future.|
 | Rear cover | 1 | [Onshape](https://cad.onshape.com/documents/4e0e4777120abfd9b26f86a5/w/9ae988b7321c140a2b7638ae/e/ec2d21f1f5317703aca99c19) | A rear cover with spots for the mini voltmeter, the push button and the display. I had problems with displays. So the size of the corresponding will be changed.
