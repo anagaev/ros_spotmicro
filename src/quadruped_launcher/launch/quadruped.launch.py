@@ -42,7 +42,7 @@ def generate_launch_description():
     '''
 
     return LaunchDescription([
-        movement_controller_node,
-        servo_controller_node
+        servo_controller_node,
+        movement_controller_node
     ])
 

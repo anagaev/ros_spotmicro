@@ -13,7 +13,8 @@ class SwingController:
                  swing_time: float,
                  length: float,
                  width: float,
-                 height: float):
+                 height: float,
+                 legs_length: np.ndarray):
         self.z_clearance = z_clearance
         self.alpha = alpha
         self.beta = beta
@@ -27,7 +28,7 @@ class SwingController:
 
         self.stance_ticks = 2 * overlap_ticks + self.swing_ticks
 
-        self.default_stance = State.init_foot_locations(length, width, height)
+        self.default_stance = State.init_foot_locations(length, width, height, legs_length[0])
 
     def raibert_touchdown_location(
         self, leg_index, command

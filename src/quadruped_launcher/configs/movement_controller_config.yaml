@@ -1,19 +1,18 @@
 MovementController:
   ros__parameters:
-    d_length: 1.0
-    d_width: 1.0
-    d_height: -0.14
-    da_legs_length: [0.055, 0.0, 0.1075, 0.078]
+    d_length: 195.0
+    d_width: 80.0
+    d_height: -170.0
+    da_legs_length: [50.0, 110.0, 130.0]
     int_n_phases: 4
     d_z_time_constant: 0.02
     d_dt: 0.01
     d_overlap_time: 0.1
-    d_swing_time: 0.15
+    d_swing_time: 0.1
     d_swing_z_time_constant: 0.02
-    d_z_clearance: 0.01
+    d_z_clearance: 20.0
     d_alpha: 1.0
     d_beta: 1.0
-    d_overlap_time: 0.1
     d_yaw_rate: 0.0
     d_pitch: 0.0
     d_roll: 0.0

@@ -45,7 +45,10 @@ class MovementControllerNode(Node):
                 ('d_activation', rclpy.Parameter.Type.DOUBLE)
             ]
         )
-        contact_phases = np.array([[1, 1, 1, 0], [1, 0, 1, 1], [1, 0, 1, 1], [1, 1, 1, 0]])
+        contact_phases = np.array([[1, 1, 1, 0],
+                                   [1, 0, 1, 1],
+                                   [1, 0, 1, 1],
+                                   [1, 1, 1, 0]])
         args = [arg.value for arg in self.get_parameters(['d_length', 'd_width', 'da_legs_length'])]
         self.kinematic = Kynematic(*args)
         args = [arg.value for arg in self.get_parameters(['int_n_phases', 'd_dt', 'd_overlap_time', 'd_swing_time'])]
@@ -61,18 +64,20 @@ class MovementControllerNode(Node):
                                                           'd_swing_time',
                                                           'd_length',
                                                           'd_width',
-                                                          'd_height'])]
+                                                          'd_height',
+                                                          'da_legs_length'])]
         self.swing_controller = SwingController(*args)
 
         self.publisher_joints_angles = self.create_publisher(Float32MultiArray, '/joints_angles', 10)
-        self.timer = self.create_timer(0.1, self.send_joints_angles)
+        self.timer = self.create_timer(0.001, self.send_joints_angles)
 
+        '''
         self.subscriber_direction_command = self.create_subscription(Point,
                                                                      '/direction_command',
                                                                      self.update_horizontal_velocity_and_height,
                                                                      10)
-
-        horizontal_velocity = np.array([0.0, 0.0])
+        '''
+        horizontal_velocity = np.array([10.0, 0.0])
         args = [arg.value for arg in self.get_parameters(['d_yaw_rate',
                                                          'd_pitch',
                                                          'd_roll',
@@ -86,7 +91,8 @@ class MovementControllerNode(Node):
                                                             'd_activation',
                                                             'd_height',
                                                             'd_length',
-                                                            'd_width'])]
+                                                            'd_width',
+                                                            'da_legs_length'])]
         self.test_state = State(horizontal_velocity, *args)
 
 
@@ -100,6 +106,7 @@ class MovementControllerNode(Node):
         """
         contact_modes = self.gait_scheduler.contacts(state.ticks)
         new_foot_locations = np.ones((3, 4))
+        self.get_logger().info(f'Contacts ' + ','.join([str(v) for v in contact_modes]))
         for leg_index in range(4):
             contact_mode = contact_modes[leg_index]
             if contact_mode == 1:
@@ -115,6 +122,7 @@ class MovementControllerNode(Node):
                     command
                 )
             new_foot_locations[:3, leg_index] = new_location
+            self.get_logger().info(f'Leg {leg_index} ' + ','.join([str(v) for v in new_location]))
         return new_foot_locations, contact_modes
     
     def update_horizontal_velocity_and_height(self, msg: Point):
@@ -130,6 +138,7 @@ class MovementControllerNode(Node):
         controller : Controller
             Robot controller object.
         """
+        self.get_logger().info('Send angles')
         self.test_state.foot_locations, contact_modes = self.calculate_next_foot_pos(
             self.test_state,
             self.test_command,

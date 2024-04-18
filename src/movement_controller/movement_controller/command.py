@@ -21,7 +21,7 @@ class Command(BaseState):
                          activation,
                          height
                         )
-        self.horizontal_velocity = np.array([0.2, 0.0])       
+        self.horizontal_velocity = np.array([25.0, 0.0])       
         self.hop_event = False
         self.trot_event = False
         self.activate_event = False
